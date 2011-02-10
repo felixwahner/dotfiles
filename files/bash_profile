@@ -1,0 +1,54 @@
+# history settings
+export HISTCONTROL=erasedups
+export HISTFILESIZE=10000
+export HISTSIZE=${HISTFILESIZE}
+
+# grep settings
+export GREP_OPTIONS="--color=auto"
+export GREP_COLOR="4;33"
+
+# load completions
+source ~/.git_completion.sh
+source ~/.bash_completion.sh
+
+# ls aliases
+alias ls="ls -Gh"
+alias ll="ls -l"
+alias la="ll -a"
+alias lt="ll -t"
+
+# lock screen
+alias lock="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
+
+# RVM aliases
+alias rgc="rvm gemset create"
+alias rgu="rvm gemset use"
+
+# misc aliases
+alias his="history"
+alias top="top -o cpu"
+alias showip="ifconfig | grep broadcast | sed 's/.*inet \(.*\) netmask.*/\1/'"
+
+# shell behavior
+shopt -s cdspell
+shopt -s nocaseglob
+shopt -s checkwinsize
+shopt -s dotglob
+shopt -s extglob
+shopt -s progcomp
+
+# no core dumps
+ulimit -S -c 0
+
+# reload source
+reload() { source ~/.bash_profile; }
+
+# Activate RVM
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
+# prompt: [user@host] path (branch)
+PS1='\n[\u@\h] \[\033[1;34m\]\w\[\033[0m\]$(__git_ps1 " \[\033[0;33m\](%s)\[\033[0m\]")\n\$ '
+
+# prompt: [user@host] ruby path (branch)
+#PS1='\n[\u@\h] \[\033[1;31m\]`~/.rvm/bin/rvm-prompt i v` \[\033[1;30m\]\w\a\[\033[0m\]$(__git_ps1 " \[\033[1;37m\](%s)\[\033[0m\]")\n\$ '
+

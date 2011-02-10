@@ -1,0 +1,25 @@
+[user]
+	name = Walter Souto
+	email = wsouto@gmail.com
+
+[core]
+	editor = mvim -f
+	autocrlf = input
+	safecrlf = true
+	excludesfile = /home/walter/.gitignore
+
+[alias]
+	co = checkout
+	br = branch
+	st = status
+	ci = commit
+
+[color]
+	diff = auto
+	branch = auto
+	status = auto
+	interactive = auto
+	ui = true
+
+[help]
+	autocorrect = 1
