@@ -3,7 +3,7 @@
 	email = wsouto@gmail.com
 
 [core]
-	editor = mvim -f
+	editor = vim
 	autocrlf = input
 	safecrlf = true
 	excludesfile = /home/walter/.gitignore
