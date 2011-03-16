@@ -1,6 +1,6 @@
 .DS_Store
-*.tmproj
+.tmproj
 .idea
-*.swp
-*.swo
+.swp
+.swo
 *~
