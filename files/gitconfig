@@ -6,7 +6,7 @@
 	editor = vim
 	autocrlf = input
 	safecrlf = true
-	excludesfile = /home/walter/.gitignore
+	excludesfile = ~/.gitignore
 
 [alias]
 	co = checkout
