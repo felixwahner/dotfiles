@@ -11,7 +11,9 @@ cp files/rvmrc ~/.rvmrc
 cp files/gitignore ~/.gitignore
 
 # Need this
-sudo mkdir -p /etc/bash_completion
+if [ ! -d /etc/bash_completion ]; then
+    sudo mkdir -p /etc/bash_completion
+fi
 
 # Set the shell
 source ~/.bash_profile
