@@ -1,0 +1,79 @@
+# history settings
+export HISTCONTROL=erasedups
+export HISTFILESIZE=10000
+export HISTSIZE=${HISTFILESIZE}
+
+# grep settings
+export GREP_OPTIONS="--color=auto"
+export GREP_COLOR="4;33" # yellow
+
+# load completions from brew installation
+# brew install bash-completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+
+# shell behavior
+shopt -s cdspell
+shopt -s nocaseglob
+shopt -s checkwinsize
+shopt -s dotglob
+shopt -s extglob
+shopt -s progcomp
+
+# no core dumps
+ulimit -S -c 0
+
+# reload source
+reload() { source ~/.bash_profile; }
+
+# Activate RVM
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
+# TODO Move aliases to a separate file
+# aliases
+alias ls="ls -Gh"
+alias ll="ls -l"
+alias la="ll -a"
+alias lt="ll -t"
+alias df="df -h"
+alias du="du -h"
+
+# confirmations
+alias cp="cp -i"
+alias rm="rm -i"
+
+# lock screen
+alias lock="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
+
+# misc aliases
+alias top="top -o cpu"
+alias hist="history"
+alias myip="ifconfig | grep broadcast | sed 's/.*inet \(.*\) netmask.*/\1/'"
+
+# Aliases to use with RVM
+alias rgc="rvm gemset create"
+alias rgu="rvm gemset use"
+alias rgl="rvm gemset list"
+alias rgd="rvm gemset delete"
+alias rgg="rgu global"
+alias r30="rgu rails30"
+alias r31="rgu rails31"
+alias rud="rvm `rvm-prompt v`"
+#alias rinit="echo 'rvm `rvm-prompt v`' > .rvmrc"
+
+# Aliases for Bundler
+alias b="bundle"
+alias bi="b install --path vendor"
+alias bu="b update"
+alias be="b exec"
+alias bp="b package"
+alias bs="b --binstubs"
+alias binit="bi && bp && bs && echo 'vendor/ruby' >> .gitignore"
+
+# prompt: [user@host] path (branch) [rvm_info]
+PS1='\n[\u@\h] \[\033[1;36m\]\w\[\033[0m\]$(__git_ps1 " \[\033[1;31m\](%s)\[\033[0m\]") \[\033[1;34m\][$(rvm-prompt v g)]\[\033[0m\]\n\$ '
+
+# prompt: [user@host] path (branch)
+#PS1='\n[\u@\h] \[\033[1;36m\]\w\[\033[0m\]$(__git_ps1 " \[\033[1;31m\](%s)\[\033[0m\]") \[\033[1;34m\]\[\033[0m\]\n\$ '
+
