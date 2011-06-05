@@ -13,18 +13,13 @@ shopt -s checkwinsize
 shopt -s dotglob
 shopt -s extglob
 
-# load completions from brew installation
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
-fi
-
 # no core dumps
 ulimit -S -c 0
 
 # reload source
 reload() { source ~/.bash_profile; }
 
-# Activate RVM
+# activate RVM
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 # prompt: [user@host] path (branch) [rvm_info]
@@ -32,4 +27,14 @@ PS1='\n[\u@\h] \[\033[1;36m\]\w\[\033[0m\]$(__git_ps1 " \[\033[1;31m\](%s)\[\033
 
 # prompt: [user@host] path (branch)
 #PS1='\n[\u@\h] \[\033[1;36m\]\w\[\033[0m\]$(__git_ps1 " \[\033[1;31m\](%s)\[\033[0m\]") \[\033[1;34m\]\[\033[0m\]\n\$ '
+
+# load aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# load completions from brew installation
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
 
