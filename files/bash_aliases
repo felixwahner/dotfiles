@@ -3,7 +3,10 @@
 #
 
 # Main commands
-alias ls="ls -Gh"
+if [ `uname` == "Darwin" ]; then
+    alias ls="ls -Gh"
+fi
+
 alias ll="ls -l"
 alias la="ll -a"
 alias lt="ll -t"

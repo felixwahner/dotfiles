@@ -1,7 +1,15 @@
+#
+# Installs dotfiles for bash shells
+#
+
+# Only copy these files if on Mac OS X system
+if [ `uname` == "Darwin" ]; then
+    cp files/bashrc ~/.bashrc
+    cp files/bash_profile ~/.bash_profile
+fi
+
 # Copy files to home directory
-cp files/bash_profile ~/.bash_profile
-cp files/bash_profile ~/.bash_aliases
-cp files/bashrc ~/.bashrc
+cp files/bash_aliases ~/.bash_aliases
 cp files/gitconfig ~/.gitconfig
 cp files/irbrc ~/.irbrc
 cp files/inputrc ~/.inputrc
@@ -10,7 +18,7 @@ cp files/rvmrc ~/.rvmrc
 cp files/gitignore ~/.gitignore
 
 # Get the whole shebang now!
-source ~/.bash_profile
+source ~/.bashrc
 
 cat <<EOM
 
