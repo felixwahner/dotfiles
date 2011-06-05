@@ -6,18 +6,17 @@ export HISTSIZE=1000
 # append to the history file, don't overwrite it
 shopt -s histappend
 
-# load completions from brew installation
-# brew install bash-completion
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
-fi
-
 # shell behavior
 shopt -s cdspell
 shopt -s nocaseglob
 shopt -s checkwinsize
 shopt -s dotglob
 shopt -s extglob
+
+# load completions from brew installation
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
 
 # no core dumps
 ulimit -S -c 0
