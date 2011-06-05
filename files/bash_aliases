@@ -1,0 +1,49 @@
+#
+# Shell Aliases
+#
+
+# Main commands
+alias ls="ls -Gh"
+alias ll="ls -l"
+alias la="ll -a"
+alias lt="ll -t"
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias df="df -h"
+alias du="du -h"
+
+# confirmations
+alias cp="cp -i"
+alias rm="rm -i"
+
+# lock screen
+alias lock="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
+
+# misc aliases
+alias top="top -o cpu"
+alias hist="history"
+alias myip="ifconfig | grep broadcast | sed 's/.*inet \(.*\) netmask.*/\1/'"
+
+# to use with RVM
+alias rgc="rvm gemset create"
+alias rgu="rvm gemset use"
+alias rgl="rvm gemset list"
+alias rgd="rvm gemset delete"
+alias rgg="rgu global"
+alias r30="rgu rails30"
+alias r31="rgu rails31"
+alias rud="rvm `rvm-prompt v`"
+#alias rinit="echo 'rvm `rvm-prompt v`' > .rvmrc"
+
+# for Bundler
+alias b="bundle"
+alias bi="b install --path vendor"
+alias bu="b update"
+alias be="b exec"
+alias bp="b package"
+alias bs="b --binstubs"
+alias binit="bi && bp && bs && echo 'vendor/ruby' >> .gitignore"
+
