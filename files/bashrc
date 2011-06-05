@@ -6,10 +6,6 @@ export HISTSIZE=1000
 # append to the history file, don't overwrite it
 shopt -s histappend
 
-# grep settings
-export GREP_OPTIONS="--color=auto"
-export GREP_COLOR="4;33" # yellow
-
 # load completions from brew installation
 # brew install bash-completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
@@ -33,11 +29,16 @@ reload() { source ~/.bash_profile; }
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 # TODO Move aliases to a separate file
-# aliases
+# Main commands
 alias ls="ls -Gh"
 alias ll="ls -l"
 alias la="ll -a"
 alias lt="ll -t"
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
 alias df="df -h"
 alias du="du -h"
 
@@ -53,7 +54,7 @@ alias top="top -o cpu"
 alias hist="history"
 alias myip="ifconfig | grep broadcast | sed 's/.*inet \(.*\) netmask.*/\1/'"
 
-# Aliases to use with RVM
+# to use with RVM
 alias rgc="rvm gemset create"
 alias rgu="rvm gemset use"
 alias rgl="rvm gemset list"
@@ -64,7 +65,7 @@ alias r31="rgu rails31"
 alias rud="rvm `rvm-prompt v`"
 #alias rinit="echo 'rvm `rvm-prompt v`' > .rvmrc"
 
-# Aliases for Bundler
+# for Bundler
 alias b="bundle"
 alias bi="b install --path vendor"
 alias bu="b update"
