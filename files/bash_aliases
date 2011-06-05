@@ -47,3 +47,6 @@ alias bp="b package"
 alias bs="b --binstubs"
 alias binit="bi && bp && bs && echo 'vendor/ruby' >> .gitignore"
 
+# reload shell
+alias reload="source ~/.bashrc"
+

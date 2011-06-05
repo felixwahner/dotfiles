@@ -16,15 +16,6 @@ shopt -s extglob
 # no core dumps
 ulimit -S -c 0
 
-# reload source
-reload() { source ~/.bash_profile; }
-
-# activate RVM
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-
-# prompt: [user@host] path (branch) [rvm_info]
-PS1='\n[\u@\h] \[\033[1;36m\]\w\[\033[0m\]$(__git_ps1 " \[\033[1;31m\](%s)\[\033[0m\]") \[\033[1;34m\][$(rvm-prompt v g)]\[\033[0m\]\n\$ '
-
 # prompt: [user@host] path (branch)
 #PS1='\n[\u@\h] \[\033[1;36m\]\w\[\033[0m\]$(__git_ps1 " \[\033[1;31m\](%s)\[\033[0m\]") \[\033[1;34m\]\[\033[0m\]\n\$ '
 
@@ -37,4 +28,10 @@ fi
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
+
+# activate RVM
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
+# prompt: [user@host] path (branch) [rvm_info]
+PS1='\n[\u@\h] \[\033[1;36m\]\w\[\033[0m\]$(__git_ps1 " \[\033[1;31m\](%s)\[\033[0m\]") \[\033[1;34m\][$(rvm-prompt v g)]\[\033[0m\]\n\$ '
 
