@@ -1,5 +1,6 @@
 # Copy files to home directory
 cp files/bash_profile ~/.bash_profile
+cp files/bash_profile ~/.bash_aliases
 cp files/bashrc ~/.bashrc
 cp files/gitconfig ~/.gitconfig
 cp files/irbrc ~/.irbrc
@@ -22,7 +23,7 @@ $ brew install git
 If you have XCode4 installed* then you need to
 alter your path to use brew's version of git.
 In order to do that, edit the /etc/paths file
-and put /usr/local/bin before /usr/bin. 
+and put /usr/local/bin before /usr/bin.
 
 * This is because XCode4 installs a git version
 in the /usr/bin directory. Maybe it's better to
