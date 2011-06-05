@@ -10,6 +10,7 @@ fi
 
 # Copy files to home directory
 cp files/bash_aliases ~/.bash_aliases
+cp files/bash_prompt ~/.bash_prompt
 cp files/gitconfig ~/.gitconfig
 cp files/irbrc ~/.irbrc
 cp files/inputrc ~/.inputrc
