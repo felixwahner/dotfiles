@@ -55,6 +55,6 @@ export GIT_PS1_SHOWUPSTREAM="verbose"
 PS1="\n${bldwht}[\u@\h] ${bldcyn}\w\$(color_by_status)\$(__git_ps1 ' (%s)') ${bldpur}[\$(rvm-prompt v g)] ${txtrst}\n\$ "
 
 # Prompt for solarized color scheme
-PS1="\n${bldgrn}[\u@\h] ${txtcyn}\w\$(color_by_status)\$(__git_ps1 ' (%s)') ${bldpur}[\$(rvm-prompt v g)] ${txtrst}\n\$ "
+#PS1="\n${bldgrn}[\u@\h] ${txtcyn}\w\$(color_by_status)\$(__git_ps1 ' (%s)') ${bldpur}[\$(rvm-prompt v g)] ${txtrst}\n\$ "
 
 
