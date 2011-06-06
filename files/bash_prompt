@@ -51,5 +51,10 @@ export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM="verbose"
 
+# Prompt for normal color schemes
 PS1="\n${bldwht}[\u@\h] ${bldcyn}\w\$(color_by_status)\$(__git_ps1 ' (%s)') ${bldpur}[\$(rvm-prompt v g)] ${txtrst}\n\$ "
+
+# Prompt for solarized color scheme
+PS1="\n${bldgrn}[\u@\h] ${txtcyn}\w\$(color_by_status)\$(__git_ps1 ' (%s)') ${bldpur}[\$(rvm-prompt v g)] ${txtrst}\n\$ "
+
 
