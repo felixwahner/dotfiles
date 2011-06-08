@@ -29,10 +29,11 @@ alias rm="rm -i"
 alias top="top -o cpu"
 alias hist="history"
 
-# to use with RVM
-alias rgc="rvm gemset create"
+# for RVM
+alias rvu="rvm use"
 alias rgu="rvm gemset use"
 alias rgl="rvm gemset list"
+alias rgc="rvm gemset create"
 alias rgd="rvm gemset delete"
 alias rgg="rgu global"
 alias r30="rgu rails30"
