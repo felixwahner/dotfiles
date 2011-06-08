@@ -36,8 +36,6 @@ alias rgl="rvm gemset list"
 alias rgc="rvm gemset create"
 alias rgd="rvm gemset delete"
 alias rgg="rgu global"
-alias r30="rgu rails30"
-alias r31="rgu rails31"
 
 # for Bundler
 alias b="bundle"
