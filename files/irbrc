@@ -1,16 +1,23 @@
-require 'rubygems'
+require "rubygems"
+require "awesome_print"
 
 # Enable tab-completion.
-require 'irb/completion'
+require "irb/completion"
 
 # Load some libraries
-require 'date'
-require 'time'
+require "date"
+require "time"
 
 # Enable prompt-less prompts
 #IRB.conf[:PROMPT][:XMP][:RETURN] = "\# => %s\n"
 #IRB.conf[:PROMPT][:XMP][:PROMPT_I] = ""
 #IRB.conf[:PROMPT_MODE] = :XMP
+
+IRB::Irb.class_eval do
+  def output_value
+    ap @context.last_value
+  end
+end if defined?(AwesomePrint)
 
 # Auto-indentation.
 IRB.conf[:AUTO_INDENT] = true
@@ -19,7 +26,7 @@ IRB.conf[:AUTO_INDENT] = true
 IRB.conf[:USE_READLINE] = true
 
 # History settings
-require 'irb/ext/save-history'
+require "irb/ext/save-history"
 IRB.conf[:SAVE_HISTORY] = 100
 IRB.conf[:EVAL_HISTORY] = 100
 IRB.conf[:HISTORY_PATH] = File::expand_path("~/.irb_history")
