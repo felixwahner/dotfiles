@@ -50,12 +50,14 @@ alias gc="g cleanup"
 
 # for Bundler
 alias b="bundle"
-alias bi="b install --path vendor"
+alias bi="b install"
 alias bu="b update"
 alias be="b exec"
 alias bp="b package"
-alias bs="b --binstubs"
-alias binit="bi && bp && bs && echo 'vendor/ruby' >> .gitignore"
+
+# Use this to have all the gems and dependancies in the vendor dir of your app
+# It's intended to use as an alternative to RVM gemsets
+alias binit="bi --path vendor && bp && b --binstubs && echo 'vendor/ruby' >> .gitignore"
 
 # reload shell
 alias reload="source ~/.bashrc"
