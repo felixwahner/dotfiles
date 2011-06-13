@@ -30,12 +30,23 @@ alias top="top -o cpu"
 alias hist="history"
 
 # for RVM
-alias rvu="rvm use"
-alias rgu="rvm gemset use"
-alias rgl="rvm gemset list"
-alias rgc="rvm gemset create"
-alias rgd="rvm gemset delete"
+alias ru="rvm use"
+alias rg="rvm gemset"
+alias rgu="rg use"
+alias rgl="rg list"
+alias rgc="rg create"
+alias rgd="rg delete"
 alias rgg="rgu global"
+alias r30="rgu rails-3.0"
+alias r31="rgu rails-3.1"
+
+# for RubyGems
+alias g="gem"
+alias gl="g list"
+alias gi="g install"
+alias gu="g update"
+alias gd="g uninstall"
+alias gc="g cleanup"
 
 # for Bundler
 alias b="bundle"
