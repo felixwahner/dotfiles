@@ -23,14 +23,6 @@ color_by_status() {
   echo -e $color
 }
 
-which_rails_version() {
-  if [ -e ./app/controllers/application_controller.rb ]; then
-  #&& [ ! -z `bundle show rails` ]; then
-    wrv=$(bundle exec rails -v | cut -f2 -d' ')
-    printf "(rails-$wrv)"
-  fi
-}
-
 # normal colors
 txtblk='\[\033[0;30m\]' # Black
 txtred='\[\033[0;31m\]' # Red
@@ -60,9 +52,9 @@ export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM="verbose"
 
 # Prompt for normal color schemes
-PS1="\n${bldwht}[\u@\h] ${bldcyn}\w\$(color_by_status)\$(__git_ps1 ' (%s)') ${bldpur}[\$(~/.rvm/bin/rvm-prompt i v p g s)] ${bldred}\$(which_rails_version) ${txtrst}\n\$ "
+PS1="\n${bldwht}[\u@\h] ${bldcyn}\w\$(color_by_status)\$(__git_ps1 ' (%s)') ${bldpur}[\$(~/.rvm/bin/rvm-prompt i v p g s)] ${txtrst}\n\$ "
 
 # Prompt for solarized color scheme
-#PS1="\n${bldgrn}[\u@\h] ${txtcyn}\w\$(color_by_status)\$(__git_ps1 ' (%s)') ${bldpur}[\$(~/.rvm/bin/rvm-prompt i v p g s)] ${bldred}\$(which_rails_version) ${txtrst}\n\$ "
+#PS1="\n${bldgrn}[\u@\h] ${txtcyn}\w\$(color_by_status)\$(__git_ps1 ' (%s)') ${bldpur}[\$(~/.rvm/bin/rvm-prompt i v p g s)] ${txtrst}\n\$ "
 
 
