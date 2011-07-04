@@ -24,7 +24,7 @@ color_by_status() {
 }
 
 rails_version() {
-  if [ -e ./Gemfile ]; then
+  if [ -e ./app/controllers/application_controller.rb ]; then
     rv=$(grep -m 1 -e rails Gemfile | cut -f 3 -d ' ' | tr -d [\'])
     printf "(rails-$rv)"
   fi
