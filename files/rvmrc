@@ -1,1 +1,17 @@
+#.rvmrc
+
+# Set some RVM defaults
 export rvm_pretty_print_flag=1
+export rvm_project_rvmrc_default=1
+
+# Ensure RVM install path
+export rvm_path="$HOME/.rvm"
+
+# Force 64 bits arch on MacOS X
+# You use "-arch i386" instead
+export rvm_archflags="-arch x86_64"
+
+# Use 2 threads for make command
+# Make it 4 for a quad core CPU
+export rvm_make_flags="-j 2"
+
