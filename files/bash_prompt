@@ -53,9 +53,10 @@ rails_info() {
   fi
 }
 
-# Prompt for normal color schemes
-PS1="\n${txtwht}[\u@\h] ${bldcyn}\w $(git_color)$(__git_ps1 '(%s)') $(rvm_info) $(rails_info) ${txtrst}\n\$ "
+# Base prompt (uncomment the one you want):
+BP="\n${txtwht}[\u@\h]${bldcyn}" # Normal color scheme
+#BP="\n${bldgrn}[\u@\h]${txtcyn}" # Solarized color scheme
 
-# Prompt for solarized color scheme
-#PS1="\n${bldgrn}[\u@\h] ${txtcyn}\w $(git_color)$(__git_ps1 '(%s)') $(rvm_info) $(rails_info) ${txtrst}\n\$ "
+# Prompt for normal color schemes
+PS1="$BP \w §\$(git_color)\$(__git_ps1 ' (%s)') \$(rvm_info) \$(rails_info) ${txtrst}\n\$ "
 
