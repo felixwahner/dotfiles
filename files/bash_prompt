@@ -23,6 +23,12 @@ color_by_status() {
   echo -e $color
 }
 
+rvm_info() {
+  if command -v rvm-prompt 1> /dev/null; then
+    printf "[$(rvm-prompt i v p g s)]"
+  fi
+}
+
 rails_version() {
   if [ -e ./app/controllers/application_controller.rb ]; then
     rv=$(grep -m 1 -e rails Gemfile | cut -f 3 -d ' ' | tr -d [\'])
@@ -59,8 +65,8 @@ export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM="verbose"
 
 # Prompt for normal color schemes
-PS1="\n${txtwht}[\u@\h] ${bldcyn}\w\$(color_by_status)\$(__git_ps1 ' (%s)') ${bldpur}[\$(rvm-prompt i v p g s)] ${bldred}\$(rails_version) ${txtrst}\n\$ "
+PS1="\n${txtwht}[\u@\h] ${bldcyn}\w\$(color_by_status)\$(__git_ps1 ' (%s)') ${bldpur}\$(rvm_info) ${bldred}\$(rails_version) ${txtrst}\n\$ "
 
 # Prompt for solarized color scheme
-#PS1="\n${bldgrn}[\u@\h] ${txtcyn}\w\$(color_by_status)\$(__git_ps1 ' (%s)') ${bldpur}[\$(rvm-prompt i v p g s)] ${bldred}\$(rails_version) ${txtrst}\n\$ "
+#PS1="\n${bldgrn}[\u@\h] ${txtcyn}\w\$(color_by_status)\$(__git_ps1 ' (%s)') ${bldpur}\$(rvm_info) ${bldred}\$(rails_version) ${txtrst}\n\$ "
 
