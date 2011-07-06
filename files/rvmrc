@@ -4,8 +4,10 @@
 export rvm_pretty_print_flag=1
 export rvm_project_rvmrc_default=1
 
-# Ensure RVM install path
+# Really ensure RVM install path
 export rvm_path="$HOME/.rvm"
+export rvm_bin_path="${rvm_path}/bin"
+export rvm_man_path="${rvm_path}/man"
 
 # Force 64 bits arch on MacOS X
 # You use "-arch i386" instead
