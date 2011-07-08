@@ -1,5 +1,6 @@
-require "rubygems"
-require "awesome_print"
+#
+# .irbrc
+#
 
 # Enable tab-completion.
 require "irb/completion"
@@ -7,6 +8,16 @@ require "irb/completion"
 # Load some libraries
 require "date"
 require "time"
+
+# Load external gems
+gems = %w[rubygems ruby-debug awesome_print]
+gems.each do |gem_name|
+  begin
+    require gem_name
+  rescue LoadError
+    puts "=> Unable to load #{gem_name}"
+  end
+end
 
 # Enable prompt-less prompts
 #IRB.conf[:PROMPT][:XMP][:RETURN] = "\# => %s\n"
