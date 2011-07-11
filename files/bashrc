@@ -16,9 +16,6 @@ shopt -s extglob
 # no core dumps
 ulimit -S -c 0
 
-# prompt: [user@host] path (branch)
-#PS1='\n[\u@\h] \[\033[1;36m\]\w\[\033[0m\]$(__git_ps1 " \[\033[1;31m\](%s)\[\033[0m\]") \[\033[1;34m\]\[\033[0m\]\n\$ '
-
 # load aliases
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
