@@ -24,6 +24,16 @@ source ~/.bashrc
 cat <<EOM
 
 -----------------------------------------------
+If you are on a Linux system you'll need to put
+in your .bashrc file something like this:
+
+[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
+[[ -f ~/.bash_prompt ]] && . ~/.bash_prompt
+
+For MacOS X, a .bashrc and .bash_profile are
+provided since it usually don't have neither.
+
+-----------------------------------------------
 You might want to install this using Homebrew:
 
 $ brew install bash-completion
