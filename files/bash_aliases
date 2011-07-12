@@ -2,11 +2,11 @@
 # Shell Aliases
 #
 
-# Mac OS X only aliases
+# MacOS X only aliases
 if [ `uname` == "Darwin" ]; then
-    alias ls="ls -Gh"
-    alias lock="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
-    alias myip="ifconfig | grep broadcast | sed 's/.*inet \(.*\) netmask.*/\1/'"
+  alias ls="ls -Gh"
+else
+  alias ls="ls --color=auto -h"
 fi
 
 # Main commands
@@ -26,7 +26,6 @@ alias cp="cp -i"
 alias rm="rm -i"
 
 # misc aliases
-alias top="top -o cpu"
 alias hist="history"
 
 # for RVM
