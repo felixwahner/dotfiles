@@ -1,4 +1,6 @@
 ---
+:sources:
+- http://rubygems.org
 gem: --no-rdoc --no-ri
 :verbose: true
 :update_sources: true
