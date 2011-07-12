@@ -26,6 +26,7 @@ alias cp="cp -i"
 alias rm="rm -i"
 
 # misc aliases
+alias vi="vim"
 alias hist="history"
 
 # for RVM
