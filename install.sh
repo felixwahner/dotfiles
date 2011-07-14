@@ -18,6 +18,10 @@ cp files/gemrc ~/.gemrc
 cp files/rvmrc ~/.rvmrc
 cp files/gitignore ~/.gitignore
 
+# Get bundler-exec
+curl -L \
+https://github.com/gma/bundler-exec/raw/master/bundler-exec.sh > ~/.bundler-exec.sh
+
 # Get the whole shebang now!
 source ~/.bashrc
 
@@ -25,10 +29,11 @@ cat <<EOM
 
 -----------------------------------------------
 If you are on a Linux system you'll need to put
-in your .bashrc file something like this:
+in your .bashrc something like this:
 
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 [[ -f ~/.bash_prompt ]] && . ~/.bash_prompt
+[[ -f ~/.bundler-exec.sh ]] && . ~/.bundler-exec.sh
 
 For MacOS X, a .bashrc and .bash_profile are
 provided since it usually don't have neither.
