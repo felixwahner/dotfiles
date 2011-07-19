@@ -18,9 +18,10 @@ cp files/gemrc ~/.gemrc
 cp files/rvmrc ~/.rvmrc
 cp files/gitignore ~/.gitignore
 
-# Get bundler-exec
-curl -L \
-https://github.com/gma/bundler-exec/raw/master/bundler-exec.sh > ~/.bundler-exec.sh
+# Get bundler-exec.sh
+if [ ! -f ~/.bundler-exec.sh ]; then
+  curl -L https://github.com/gma/bundler-exec/raw/master/bundler-exec.sh > ~/.bundler-exec.sh
+fi
 
 # Get the whole shebang now!
 source ~/.bashrc
