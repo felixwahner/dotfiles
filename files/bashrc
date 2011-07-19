@@ -3,6 +3,9 @@ export HISTCONTROL=ignoredups:ignorespace
 export HISTFILESIZE=1000
 export HISTSIZE=1000
 
+# For Node.js
+export NODE_PATH="/usr/local/lib/node"
+
 # append to the history file, don't overwrite it
 shopt -s histappend
 
