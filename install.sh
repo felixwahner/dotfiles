@@ -17,6 +17,7 @@ cp files/inputrc ~/.inputrc
 cp files/gemrc ~/.gemrc
 cp files/rvmrc ~/.rvmrc
 cp files/gitignore ~/.gitignore
+cp files/dircolors ~/.dircolors
 
 # Get bundler-exec.sh
 if [ ! -f ~/.bundler-exec.sh ]; then
