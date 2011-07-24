@@ -4,8 +4,12 @@
 
 # Only copy these files if on Mac OS X system
 if [ `uname` == "Darwin" ]; then
-    cp files/bashrc ~/.bashrc
-    cp files/bash_profile ~/.bash_profile
+  cp files/bashrc ~/.bashrc
+  cp files/bash_profile ~/.bash_profile
+fi
+
+if [ `uname` == "Linux" ]; then
+  cp files/dircolors ~/.dircolors
 fi
 
 # Copy files to home directory
@@ -17,7 +21,6 @@ cp files/inputrc ~/.inputrc
 cp files/gemrc ~/.gemrc
 cp files/rvmrc ~/.rvmrc
 cp files/gitignore ~/.gitignore
-cp files/dircolors ~/.dircolors
 
 # Get bundler-exec.sh
 if [ ! -f ~/.bundler-exec.sh ]; then
