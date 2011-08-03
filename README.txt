@@ -32,6 +32,10 @@ to your existent ~/.bashrc file:
 # To use bundler-exec (see https://github.com/gma/bundler-exec)
 [[ -f ~/.bundler-exec.sh ]] && . ~/.bundler-exec.sh
 
+# To activate RVM and RVM completion
+[[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
+[[ -r ~/.rvm/scripts/completion ]] && source ~/.rvm/scripts/completion
+
 # To load prompt theme (must be after the RVM activation)
 [[ -f ~/.bash_prompt ]] && . ~/.bash_prompt
 
