@@ -2,6 +2,7 @@
 
 # Set some RVM defaults
 export rvm_pretty_print_flag=1
+export rvm_project_rvmrc=1
 export rvm_project_rvmrc_default=1
 
 # Really ensure RVM install path
