@@ -34,6 +34,9 @@ fi
 [[ -f "$HOME/.bundler-exec.sh" ]] && . "$HOME/.bundler-exec.sh"
 [[ -r "$HOME/.rvm/scripts/completion" ]] && . "$HOME/.rvm/scripts/completion"
 
+# use global gemset
+rvm gemset use global
+
 # load prompt
 if [ -f ~/.bash_prompt ]; then
     . ~/.bash_prompt
