@@ -1,3 +1,4 @@
+#!/bin/bash
 #
 # Installs dotfiles for bash shells
 #
@@ -28,4 +29,4 @@ if [ ! -f ~/.bundler-exec.sh ]; then
 fi
 
 # Get the whole shebang now!
-source ~/.bashrc
+source "$HOME/.bashrc"
