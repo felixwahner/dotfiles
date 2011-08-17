@@ -30,9 +30,9 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 fi
 
 # activate RVM and bundler-exec
-[[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
-[[ -r ~/.rvm/scripts/completion ]] && source ~/.rvm/scripts/completion
-[[ -f ~/.bundler-exec.sh ]] && source ~/.bundler-exec.sh
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+[[ -f "$HOME/.bundler-exec.sh" ]] && . "$HOME/.bundler-exec.sh"
+[[ -r "$HOME/.rvm/scripts/completion" ]] && . "$HOME/.rvm/scripts/completion"
 
 # load prompt
 if [ -f ~/.bash_prompt ]; then
