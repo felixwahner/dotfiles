@@ -31,7 +31,6 @@ fi
 
 # activate RVM and bundler-exec
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-[[ -f "$HOME/.bundler-exec.sh" ]] && . "$HOME/.bundler-exec.sh"
 [[ -r "$HOME/.rvm/scripts/completion" ]] && . "$HOME/.rvm/scripts/completion"
 
 # use global gemset
