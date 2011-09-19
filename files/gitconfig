@@ -27,8 +27,8 @@
   ui = true
 
 [github]
-    user =
-    token =
+  user =
+  token =
 
 [help]
   autocorrect = 1
