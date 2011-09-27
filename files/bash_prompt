@@ -39,6 +39,14 @@ git_color() {
   printf $color
 }
 
+# Detect rbenv information
+rbenv_info() {
+  if command -v rbenv 1> /dev/null; then
+    rbenv_prompt=`rbenv version | cut -f1 -d ' '`
+    printf "${bldpur}[$rbenv_prompt]"
+  fi
+}
+
 # Detect RVM information
 rvm_info() {
   if command -v rvm-prompt 1> /dev/null; then
@@ -58,5 +66,5 @@ BP="\n${txtwht}[\u@\h]${bldcyn}" # Normal color scheme
 #BP="\n${bldgrn}[\u@\h]${txtblu}" # Solarized color scheme
 
 # Prompt itself
-PS1="$BP \w\$(git_color)\$(__git_ps1 ' (%s)') \$(rvm_info) \$(rails_info) ${txtrst}\n§ "
+PS1="$BP \w\$(git_color)\$(__git_ps1 ' (%s)') \$(rbenv_info)\$(rvm_info) \$(rails_info) ${txtrst}\n§ "
 
