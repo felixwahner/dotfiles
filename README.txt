@@ -29,21 +29,35 @@ to your existent ~/.bashrc file:
 # To load the aliases (if it's not there already)
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 
-# To use bundler-exec (see https://github.com/gma/bundler-exec)
-[[ -f ~/.bundler-exec.sh ]] && . ~/.bundler-exec.sh
-
-# To activate RVM and RVM completion
-[[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
-[[ -r ~/.rvm/scripts/completion ]] && source ~/.rvm/scripts/completion
-
 # To load prompt theme (must be after the RVM activation)
 [[ -f ~/.bash_prompt ]] && . ~/.bash_prompt
 
 
 
+rbenv
+-----
+# load rbenv if it is installed
+if [ -d ~/.rbenv ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
+
+
+
+RVM
+---
+# To activate RVM and RVM completion
+[[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
+[[ -r ~/.rvm/scripts/completion ]] && source ~/.rvm/scripts/completion
+
+
+# To use bundler-exec (see https://github.com/gma/bundler-exec)
+[[ -f ~/.bundler-exec.sh ]] && . ~/.bundler-exec.sh
+
+
+
 Solarized Color Scheme
 ----------------------
-
 Main page (see here for iTerm2 and Terminal for Mac):
 http://ethanschoonover.com/solarized
 
