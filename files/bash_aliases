@@ -37,23 +37,20 @@ alias rgl="rvg list"
 alias rgc="rvg create"
 alias rgd="rvg delete"
 alias rgg="rgu global"
-alias r30="rgu rails-3.0"
-alias r31="rgu rails-3.1"
 
 # for RubyGems
-alias g="gem"
-alias gl="g list"
-alias gi="g install"
-alias gu="g update"
-alias gd="g uninstall"
-alias gc="g cleanup"
+alias gv="gem -v"
+alias gl="gem list"
+alias gi="gem install"
+alias gd="gem uninstall"
+alias gc="gem cleanup"
+alias gu="gem update"
 
 # for Bundler
-alias b="bundle"
-alias bi="b install"
-alias bu="b update"
-alias be="b exec"
-alias bp="b package"
+alias bi="bundle install"
+alias bu="bundle update"
+alias be="bundle exec"
+alias bp="bundle package"
 
 # Use this to have all the gems and dependancies in the vendor dir of your app
 # It's intended to use as an alternative to RVM gemsets
