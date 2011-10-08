@@ -18,6 +18,7 @@ cp files/bash_aliases ~/.bash_aliases
 cp files/bash_prompt ~/.bash_prompt
 cp files/gitconfig ~/.gitconfig
 cp files/irbrc ~/.irbrc
+cp files/pryrc ~/.pryrc
 cp files/inputrc ~/.inputrc
 cp files/gemrc ~/.gemrc
 cp files/rvmrc ~/.rvmrc
