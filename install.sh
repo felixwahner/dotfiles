@@ -9,10 +9,6 @@ if [ `uname` == "Darwin" ]; then
   cp files/bash_profile ~/.bash_profile
 fi
 
-if [ `uname` == "Linux" ]; then
-  cp files/dircolors ~/.dircolors
-fi
-
 # Copy files to home directory
 cp files/bash_aliases ~/.bash_aliases
 cp files/bash_prompt ~/.bash_prompt
