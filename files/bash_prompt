@@ -43,27 +43,27 @@ git_color() {
 rbenv_info() {
   if command -v rbenv 1> /dev/null; then
     rbenv_prompt=`rbenv version | cut -f1 -d ' '`
-    printf "${bldpur}[$rbenv_prompt]"
+    printf "$rbenv_prompt"
   fi
 }
 
 # Detect RVM information
 rvm_info() {
   if command -v rvm-prompt 1> /dev/null; then
-    printf "${bldpur}[$(rvm-prompt i v p g s)]"
+    printf "$(rvm-prompt i v p g s)"
   fi
 }
 
 # Detect Rails version
 rails_info() {
   if [ -e ./app/controllers/application_controller.rb ]; then
-    printf "${txtylw}[rails-$(grep -m 1 -e rails Gemfile | cut -f 3 -d ' ' | tr -d [\'])]"
+    printf "$(grep -m 1 -e rails Gemfile | cut -f 3 -d ' ' | tr -d [\'])@"
   fi
 }
 
-# Base prompt (uncomment the one you want):
-BP="\n${txtwht}[\u@\h]${bldcyn}" # Normal color scheme
+# Base prompt
+BP="\n${txtwht}[\u@\h]${bldcyn}"
 
 # Prompt itself
-PS1="$BP \w\$(git_color)\$(__git_ps1 ' (%s)') \$(rbenv_info)\$(rvm_info) \$(rails_info) ${txtrst}\n§ "
+PS1="$BP \w\$(git_color)\$(__git_ps1 ' (%s)') ${txtcyn}[\$(rails_info)\$(rbenv_info)\$(rvm_info)] ${txtrst}\n§ "
 
