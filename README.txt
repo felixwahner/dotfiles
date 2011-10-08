@@ -61,6 +61,10 @@ Solarized Color Scheme
 Main page (see here for iTerm2 and Terminal for Mac):
 http://ethanschoonover.com/solarized
 
+LS colors (dircolors):
+----------------------
+https://github.com/seebi/dircolors-solarized.git
+
 gEdit:
 https://github.com/mukashi/solarized.git
 
