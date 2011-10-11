@@ -29,9 +29,6 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
 
-# use global gemset
-rvm gemset use global
-
 # load prompt
 if [ -f ~/.bash_prompt ]; then
     . ~/.bash_prompt
