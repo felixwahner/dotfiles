@@ -1,4 +1,3 @@
-
 Just run the install on a terminal:
 
 $ ./install.sh
@@ -62,12 +61,10 @@ Main page (see here for iTerm2 and Terminal for Mac):
 http://ethanschoonover.com/solarized
 
 LS colors (dircolors):
-----------------------
-https://github.com/seebi/dircolors-solarized.git
-
-gEdit:
-https://github.com/mukashi/solarized.git
+https://github.com/sigurdga/ls-colors-solarized.git
 
 gnome-terminal:
 https://github.com/sigurdga/gnome-terminal-colors-solarized.git
 
+gEdit:
+https://github.com/mukashi/solarized.git
