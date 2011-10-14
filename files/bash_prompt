@@ -62,8 +62,8 @@ rails_info() {
 }
 
 # Base prompt
-BP="\n${txtwht}[\u@\h]${bldcyn}"
+BP="\n${txtwht}[\u@\h]${txtcyn}"
 
 # Prompt itself
-PS1="$BP \w\$(git_color)\$(__git_ps1 ' (%s)') ${bldpur}[\$(rails_info)\$(rbenv_info)\$(rvm_info)] ${txtrst}\n§ "
+PS1="$BP \w\$(git_color)\$(__git_ps1 ' (%s)') ${txtpur}[\$(rails_info)\$(rbenv_info)\$(rvm_info)] ${txtrst}\n§ "
 
