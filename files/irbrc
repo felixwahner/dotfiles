@@ -3,5 +3,6 @@ begin
   Pry.start
   exit
 rescue LoadError => e
-  warn "=> Unable to load pry"
+  warn "=> Unable to load pry!"
+  puts "If you're calling from Rails you need to put this on you Gemfile."
 end
