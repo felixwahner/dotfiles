@@ -39,18 +39,14 @@ git_color() {
   printf $color
 }
 
-# Detect rbenv information
-rbenv_info() {
-  if command -v rbenv 1> /dev/null; then
-    rbenv_prompt=`rbenv version | cut -f1 -d ' '`
-    printf "$rbenv_prompt"
-  fi
-}
-
-# Detect RVM information
-rvm_info() {
-  if command -v rvm-prompt 1> /dev/null; then
-    printf "$(rvm-prompt i v p g s)"
+# Detect Ruby version
+ruby_info() {
+  if command -v rbenv 1> /dev/null
+  then
+    printf "`rbenv version | cut -f1 -d ' '`"
+  elif command -v rvm 1> /dev/null
+  then
+    printf "$(rvm-prompt v p)"
   fi
 }
 
@@ -64,6 +60,9 @@ rails_info() {
 # Base prompt
 BP="\n${txtwht}[\u@\h]${txtcyn}"
 
+# Ruby and Rails
+RR="${bldpur}[\$(rails_info)\$(ruby_info)]"
+
 # Prompt itself
-PS1="$BP \w\$(git_color)\$(__git_ps1 ' (%s)') ${txtpur}[\$(rails_info)\$(rbenv_info)\$(rvm_info)] ${txtrst}\n§ "
+PS1="$BP \w\$(git_color)\$(__git_ps1 ' (%s)') $RR ${txtrst}\n> "
 
