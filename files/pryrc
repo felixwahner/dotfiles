@@ -1,4 +1,6 @@
-Pry.config.editor = "gvim --nofork"
+# Set default editor
+Pry.config.editor = "vim"
+#Pry.config.editor = "gvim --nofork"
 
 Pry.config.prompt = proc do |obj, level, _|
   prompt = "\e[1;30m"
@@ -7,21 +9,13 @@ Pry.config.prompt = proc do |obj, level, _|
   "#{prompt} (#{obj}) >\e[0m "
 end
 
+# Set color red for exceptions
 Pry.config.exception_handler = proc do |output, exception, _|
   output.puts "\e[31m#{exception.class}: #{exception.message}"
   output.puts "from #{exception.backtrace.first}\e[0m"
 end
 
-if defined?(Rails)
-  begin
-    require "rails/console/app"
-    require "rails/console/helpers"
-  rescue LoadError => e
-    require "console_app"
-    require "console_with_helpers"
-  end
-end
-
+# Try to load awesome_print
 begin
   require "awesome_print"
   Pry.config.print = proc {|output, value| Pry::Helpers::BaseHelpers.stagger_output("=> #{value.ai}", output)}
@@ -29,3 +23,4 @@ rescue LoadError => e
   warn "=> Unable to load gem 'awesome_print'!"
   puts "If you're calling from Rails you need to put this gem on your Gemfile."
 end
+
