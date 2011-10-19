@@ -25,7 +25,7 @@ end
 begin
   require "awesome_print"
   Pry.config.print = proc {|output, value| Pry::Helpers::BaseHelpers.stagger_output("=> #{value.ai}", output)}
-rescue LoadError => err
-  warn "=> Unable to load awesome_print"
-  puts "If you're calling from Rails you need to put this on you Gemfile."
+rescue LoadError => e
+  warn "=> Unable to load gem 'awesome_print'!"
+  puts "If you're calling from Rails you need to put this gem on your Gemfile."
 end
