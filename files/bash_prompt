@@ -61,7 +61,7 @@ rails_info() {
 BP="\n${txtwht}[\u@\h]${txtcyn}"
 
 # Ruby and Rails
-RR="${bldpur}[\$(rails_info)\$(ruby_info)]"
+RR="${bldblk}[\$(rails_info)\$(ruby_info)]"
 
 # Prompt itself
 PS1="$BP \w\$(git_color)\$(__git_ps1 ' (%s)') $RR ${txtrst}\n> "
