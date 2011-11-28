@@ -56,6 +56,9 @@ alias bp="bundle package"
 # It's intended to use as an alternative to RVM gemsets
 alias binit="bi --path vendor && bp && b --binstubs && echo 'vendor/ruby' >> .gitignore"
 
+# Start MongoDB
+alias mongodb="mongod run --config /usr/local/Cellar/mongodb/2.0.1-x86_64/mongod.conf --rest --f"
+
 # reload shell
 alias reload="source ~/.bashrc"
 
