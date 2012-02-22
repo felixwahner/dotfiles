@@ -56,11 +56,8 @@ alias bp="bundle package"
 # It's intended to use as an alternative to RVM gemsets
 alias binit="bi --path vendor && bp && b --binstubs && echo 'vendor/ruby' >> .gitignore"
 
-# Sublime Text 2
-alias st='open -a "Sublime Text 2"'
-
 # Start MongoDB
-alias mongodb="mongod run --config /usr/local/Cellar/mongodb/2.0.1-x86_64/mongod.conf --rest --fork"
+alias mongodb="mongod run --config /usr/local/etc/mongod.conf --rest --fork"
 
 # reload shell
 alias reload="source ~/.bashrc"
