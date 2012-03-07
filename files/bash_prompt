@@ -47,22 +47,27 @@ ruby_info() {
   elif command -v rvm 1> /dev/null
   then
     printf "$(rvm-prompt v p g)"
+  else
+    printf "$(ruby -v | cut -f2 -d ' ')"
   fi
 }
 
 # Detect Rails version
 rails_info() {
   if [ -e ./app/controllers/application_controller.rb ]; then
-    printf "$(grep -m 1 -e rails Gemfile | cut -f 3 -d ' ' | tr -d [\'])@"
+    printf "$(grep -m 1 -e rails Gemfile | cut -f3 -d ' ' | tr -d [\'\"])@"
   fi
 }
 
 # Base prompt
-BP="\n${txtwht}[\u@\h]${txtcyn}"
+BP="\n${txtwht}[\u@\h]${txtcyn} \w"
+
+# Git
+GP="\$(git_color)\$(__git_ps1 ' (%s)')"
 
 # Ruby and Rails
 RR="${txtylw}[\$(rails_info)\$(ruby_info)]"
 
 # Prompt itself
-PS1="$BP \w\$(git_color)\$(__git_ps1 ' (%s)') $RR ${txtrst}\n> "
+PS1="$BP$GP $RR ${txtrst}\n$ "
 
