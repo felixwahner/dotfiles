@@ -1,6 +1,6 @@
 [user]
-	name = Walter Souto
-	email = wsouto@gmail.com
+  name = Walter Souto
+  email = wsouto@gmail.com
 
 [core]
   editor = vim
@@ -18,7 +18,7 @@
   co = checkout
   br = branch
   st = status
-  ci = commit -s
+  ci = commit
 
 [color]
   diff = auto
