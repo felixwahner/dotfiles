@@ -1,12 +1,13 @@
 [user]
-  name = Walter Souto
-  email = wsouto@gmail.com
+	name = Walter Souto
+	email = wsouto@gmail.com
 
 [core]
   editor = vim
   autocrlf = input
-  safecrlf = true
-  excludesfile = ~/.gitignore
+  #safecrlf = true
+  excludesfile = /Users/wsouto/.gitignore
+  quotepath = false
 
 [push]
   # No need to push a branch like 'git push origin my-branch-name'
@@ -17,7 +18,7 @@
   co = checkout
   br = branch
   st = status
-  ci = commit
+  ci = commit -s
 
 [color]
   diff = auto
@@ -27,8 +28,15 @@
   ui = true
 
 [github]
-  user =
+  user = wsouto@gmail.com
   token =
 
 [help]
   autocorrect = 1
+
+[diff]
+  tool = opendiff
+
+[merge]
+  tool = opendiff
+
