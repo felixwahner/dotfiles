@@ -37,17 +37,19 @@ rbenv
 -----
 # load rbenv if it is installed
 if [ -d ~/.rbenv ]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
+  export PATH=$HOME/.rbenv/bin:$PATH
   eval "$(rbenv init -)"
 fi
 
 
-
 RVM
 ---
-# To activate RVM and RVM completion
-[[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
-[[ -r ~/.rvm/scripts/completion ]] && source ~/.rvm/scripts/completion
+# load RVM if it is installed
+if [ -d ~/.rvm ]; then
+  export PATH=$PATH:$HOME/.rvm/bin
+  [[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
+  [[ -r ~/.rvm/scripts/completion ]] && source ~/.rvm/scripts/completion
+fi
 
 
 
