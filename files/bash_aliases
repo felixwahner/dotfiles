@@ -4,12 +4,19 @@
 
 # MacOS X only aliases
 if [ `uname` == "Darwin" ]; then
-  alias ls="ls -Gh"
+  export CLICOLOR=1
+  export LSCOLORS=exfxbEaEBxxEhEhBaDaCaD
+
+  # or using GNU ls
+  # alias ls="gls --color=auto"
+  # eval `gdircolors ~/.dircolors > /dev/null 2>&1`
 else
   alias ls="ls --color=auto -h"
+  eval `dircolors ~/.dircolors > /dev/null 2>&1`
 fi
 
 # Main commands
+alias ls="ls -h"
 alias ll="ls -l"
 alias la="ll -a"
 alias lt="ll -t"
