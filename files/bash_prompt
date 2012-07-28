@@ -46,7 +46,7 @@ ruby_info() {
     printf "`rbenv version | cut -f1 -d ' '`"
   elif command -v rvm 1> /dev/null
   then
-    printf "$(rvm-prompt v p g)"
+    printf "$(rvm-prompt v p g s)"
   else
     printf "$(ruby -v | cut -f2 -d ' ')"
   fi
