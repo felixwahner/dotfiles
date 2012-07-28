@@ -57,5 +57,5 @@ alias bp="bundle package"
 alias binit="bi --path vendor && bp && b --binstubs && echo 'vendor/ruby' >> .gitignore"
 
 # reload shell
-alias reload="source ~/.bashrc"
+alias reload="exec $SHELL"
 
