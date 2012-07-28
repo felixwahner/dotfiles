@@ -56,13 +56,6 @@ alias bp="bundle package"
 # It's intended to use as an alternative to RVM gemsets
 alias binit="bi --path vendor && bp && b --binstubs && echo 'vendor/ruby' >> .gitignore"
 
-# Start MongoDB
-alias mongodb="mongod run --config /usr/local/etc/mongod.conf --rest --fork"
-
-# PostgreSQL
-alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
-
 # reload shell
 alias reload="source ~/.bashrc"
 
