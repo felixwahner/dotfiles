@@ -50,10 +50,6 @@ RVM
 [[ -r ~/.rvm/scripts/completion ]] && source ~/.rvm/scripts/completion
 
 
-# To use bundler-exec (see https://github.com/gma/bundler-exec)
-[[ -f ~/.bundler-exec.sh ]] && . ~/.bundler-exec.sh
-
-
 
 Solarized Color Scheme
 ----------------------
