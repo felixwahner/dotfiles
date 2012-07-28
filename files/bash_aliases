@@ -38,12 +38,9 @@ alias hist="history"
 
 # for RVM
 alias rvu="rvm use"
-alias rvg="rvm gemset"
-alias rgu="rvg use"
-alias rgl="rvg list"
-alias rgc="rvg create"
-alias rgd="rvg delete"
+alias rgu="rvm gemset use"
 alias rgg="rgu global"
+alias rgd="rgu default"
 
 # for RubyGems
 alias gv="gem -v"
