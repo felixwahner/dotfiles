@@ -31,6 +31,10 @@ to your existent ~/.bashrc file:
 # To load prompt theme (must be after the RVM activation)
 [[ -f ~/.bash_prompt ]] && . ~/.bash_prompt
 
+You maybe need to install bash-completion package.
+On Debian/Ubuntu systems you can do:
+
+$ sudo apt-get install bash-completion
 
 
 rbenv
