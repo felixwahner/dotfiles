@@ -16,5 +16,5 @@ export rvm_archflags="-arch x86_64"
 
 # Use 2 threads for make command
 # Make it 4 for a quad core CPU
-export rvm_make_flags="-j 2"
+export rvm_make_flags="-j2"
 
